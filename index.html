@@ -1,12 +1,165 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 - Futuro Sustentável</title>
     <link rel="stylesheet" href="style.css">
-    <title>Projeto Agrinho 2026</title>
 </head>
 <body>
-   <script src="main.js"></script> 
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Agrinho <span>2026</span></a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+                    <li><a href="#tecnologia">Tecnologia</a></li>
+                    <li><a href="#impactos">Impactos</a></li>
+                    <li><a href="#quiz-secao">Quiz Agro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner" id="inicio">
+        <div class="banner-content">
+            <h1>Inovação, Tecnologia e Terra</h1>
+            <p>Descubra como a tecnologia e a agricultura caminham juntas para semear um futuro sustentável.</p>
+            <a href="#sustentabilidade" class="btn-principal">Explorar Projeto</a>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <section class="section" id="introducao">
+            <h2 class="section-title">O Agrinho 2026</h2>
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <p>O tema do **Agrinho 2026** celebra a união indispensável entre o conhecimento tradicional do campo, o respeito à natureza e o avanço tecnológico das cidades.</p>
+                    <p>Nosso objetivo é mostrar que alimentar o mundo e proteger o planeta não são tarefas opostas, mas sim o mesmo caminho em direção ao amanhã.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section" id="sustentabilidade">
+            <h2 class="section-title">Sustentabilidade no Campo</h2>
+            <p class="section-subtitle">Práticas essenciais para preservar os recursos do nosso planeta.</p>
+            
+            <div class="cards-grid">
+                <div class="card card-interativo">
+                    <h3>Preservação & Água</h3>
+                    <p>O uso consciente da água através do gotejamento inteligente reduz o desperdício em até 60% nas lavouras.</p>
+                    <div class="card-detalhe">Clique para saber mais: Sensores de umidade no solo avisam o momento exato de irrigar!</div>
+                </div>
+                <div class="card card-interativo">
+                    <h3>Energia Limpa</h3>
+                    <p>A utilização de painéis solares e biomassa gerada por resíduos transforma fazendas em produtoras da sua própria energia.</p>
+                    <div class="card-detalhe">Clique para saber mais: Isso reduz custos e zera a emissão de carbono na produção de energia regional.</div>
+                </div>
+                <div class="card card-interativo">
+                    <h3>Reciclagem & Campo</h3>
+                    <p>A logística reversa de embalagens de defensivos e a compostagem de matéria orgânica nutrem a terra sem poluí-la.</p>
+                    <div class="card-detalhe">Clique para saber mais: Restos de culturas antigas viram adubo natural rico em nutrientes essenciais.</div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section" id="tecnologia">
+            <h2 class="section-title">Tecnologia de Ponta na Produção</h2>
+            <div class="tech-container">
+                <div class="tech-item">
+                    <h4>Drones & Sensores</h4>
+                    <p>Drones sobrevoam as plantações identificando pragas em tempo real, permitindo ações rápidas e localizadas.</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Inteligência Artificial & Robótica</h4>
+                    <p>Algoritmos analisam previsões do tempo históricas, enquanto braços robóticos realizam colheitas delicadas sem danificar os alimentos.</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Automação Agrícola</h4>
+                    <p>Tratores guiados por GPS realizam a plantação com precisão milimétrica, economizando combustível e sementes.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section" id="impactos">
+            <h2 class="section-title">Impactos Positivos</h2>
+            <div class="impactos-grid">
+                <div class="impacto-box">
+                    <h5>Para os Produtores</h5>
+                    <p>Mais lucro, menos desperdício de insumos e maior segurança no gerenciamento da terra.</p>
+                </div>
+                <div class="impacto-box">
+                    <h5>Para as Cidades</h5>
+                    <p>Alimentos mais saudáveis, limpos e com preços acessíveis chegando diariamente às mesas.</p>
+                </div>
+                <div class="impacto-box">
+                    <h5>Para o Meio Ambiente</h5>
+                    <p>Florestas preservadas, rios protegidos e solo fértil garantido para as próximas gerações.</p>
+                </div>
+                <div class="impacto-box">
+                    <h5>Para a Economia</h5>
+                    <p>Fortalecimento do mercado verde internacional e geração de novos empregos tecnológicos no campo.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section quiz-section" id="quiz-secao">
+            <h2 class="section-title">Quiz Agrinho Sustentável</h2>
+            <p class="section-subtitle">Teste seus conhecimentos sobre o Agro Tecnológico!</p>
+            
+            <div class="quiz-container">
+                <div id="pergunta-container">
+                    <p id="pergunta-texto">Qual tecnologia ajuda a economizar água monitorando a umidade diretamente no solo?</p>
+                    <div class="quiz-opcoes">
+                        <button class="btn-opcao" onclick="verificarResposta(false)">A) Trator com GPS</button>
+                        <button class="btn-opcao" onclick="verificarResposta(true)">B) Sensores de Solo</button>
+                        <button class="btn-opcao" onclick="verificarResposta(false)">C) Drones de Imagem</button>
+                    </div>
+                </div>
+                <div id="quiz-resultado" class="escondido">
+                    <p id="resultado-texto"></p>
+                    <button class="btn-principal" onclick="reiniciarQuiz()">Jogar Novamente</button>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section conclusao">
+            <h2>O Futuro é Agora</h2>
+            <blockquote class="frase-motivacional">
+                "A tecnologia nos dá as ferramentas, a natureza nos dá a vida, e a sustentabilidade garante o nosso amanhã."
+            </blockquote>
+            <p>O Agrinho 2026 convida você a ser parte dessa transformação. Seja na escola, na cidade ou na fazenda, cada pequena ação planta um futuro melhor!</p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Projeto Agrinho. Desenvolvido para um Amanhã Sustentável.</p>
+            <p>Tecnologia &bull; Agricultura &bull; Ecologia</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>

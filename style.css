@@ -1,0 +1,377 @@
+/* ==========================================================================
+   CONFIGURAÇÕES INICIAIS E VARIÁVEIS (Paleta Solicitada)
+   ========================================================================== */
+:root {
+    --cor-principal: #a9dfbf;     /* Verde Bebê */
+    --cor-secundaria: #8d6e63;    /* Marrom */
+    --cor-fundo: #f5f5f5;         /* Cinza Claro */
+    --cor-texto: #212121;         /* Preto Suave */
+    --cor-botao: #111111;         /* Preto */
+    --cor-card-bg: #ffffff;       /* Branco para contraste dos cards */
+    --transicao-suave: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Scroll suave nativo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+}
+
+/* ==========================================================================
+   CABECALHO E MENU RESPONSIVO
+   ========================================================================== */
+.header {
+    background-color: var(--cor-card-bg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+
+.logo span {
+    color: #4a90e2; /* Detalhe azul para lembrar tecnologia */
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 500;
+    transition: var(--transicao-suave);
+}
+
+.nav-menu a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* Botão do Menu Mobile (Hamburguer) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--cor-botao);
+    transition: var(--transicao-suave);
+}
+
+/* ==========================================================================
+   BANNER PRINCIPAL (Estilo Agro-Tecnológico)
+   ========================================================================== */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.banner-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+/* BOTÕES */
+.btn-principal {
+    display: inline-block;
+    background-color: var(--cor-botao);
+    color: #ffffff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: var(--transicao-suave);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-principal:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   SEÇÕES GENÉRICAS E CARDS
+   ========================================================================== */
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--cor-secundaria);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Grid de Cards (Sustentabilidade) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: var(--cor-card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 5px solid var(--cor-principal);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: var(--transicao-suave);
+}
+
+/* Funcionalidade Interativa dos Cards */
+.card-interativo {
+    cursor: pointer;
+}
+
+.card-interativo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--cor-secundaria);
+}
+
+.card-detalhe {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--cor-secundaria);
+    font-style: italic;
+    display: none; /* Controlado via JS */
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+}
+
+/* Exibir detalhe quando ativo */
+.card.ativo .card-detalhe {
+    display: block;
+}
+
+/* ==========================================================================
+   TECNOLOGIA E IMPACTOS
+   ========================================================================== */
+/* Layout Tecnológico */
+.tech-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tech-item {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--cor-secundaria);
+}
+
+.tech-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+/* Grid de Impactos */
+.impactos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.impacto-box {
+    background-color: var(--cor-card-bg);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.impacto-box h5 {
+    color: var(--cor-secundaria);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   QUIZ INTERATIVO
+   ========================================================================== */
+.quiz-container {
+    background-color: var(--cor-card-bg);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+#pergunta-texto {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.quiz-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-opcao {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    border: 2px solid var(--cor-principal);
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transicao-suave);
+}
+
+.btn-opcao:hover {
+    background-color: var(--cor-principal);
+}
+
+.escondido {
+    display: none;
+}
+
+#resultado-texto {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   CONCLUSÃO E FOOTER
+   ========================================================================== */
+.conclusao {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.frase-motivacional {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--cor-secundaria);
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: var(--cor-botao);
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (Media Queries)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Exibe botão hamburguer */
+    }
+
+    .nav-menu {
+        display: none; /* Esconde menu padrão */
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--cor-card-bg);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 20px;
+    }
+
+    /* Classe dinâmica ativada via JavaScript */
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .banner-content h1 {
+        font-size: 2rem;
+    }
+}
